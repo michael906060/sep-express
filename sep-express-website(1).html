@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEP Express | House Removals & Man & Van</title>
+  <meta name="description" content="SEP Express provides reliable house removals, man and van, furniture transport, collections and local moving services across the West Midlands.">
+  <style>
+    :root{
+      --dark:#0b0d10;
+      --card:#14181d;
+      --text:#f5f7fa;
+      --muted:#aab2bd;
+      --accent:#ffb000;
+      --accent2:#ffd15c;
+      --line:#252b33;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;background:var(--dark);color:var(--text);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(11,13,16,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:1.45rem;font-weight:900;letter-spacing:-.5px}
+    .logo span{color:var(--accent)}
+    .navlinks{display:flex;gap:25px;color:#d9dee5;font-weight:700;font-size:.94rem}
+    .navlinks a:hover{color:var(--accent)}
+    .menu{display:none;background:none;border:0;color:white;font-size:1.7rem}
+    .hero{min-height:calc(100vh - 72px);display:grid;place-items:center;position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 35%,rgba(255,176,0,.18),transparent 32%),linear-gradient(135deg,#0b0d10,#15191e)}
+    .hero-inner{position:relative;padding:90px 0;max-width:800px}
+    .badge{display:inline-block;padding:7px 13px;border:1px solid #3b4048;border-radius:999px;color:var(--accent2);font-weight:800;font-size:.8rem;margin-bottom:20px}
+    h1{font-size:clamp(3rem,8vw,6.5rem);line-height:.92;letter-spacing:-5px;margin-bottom:25px}
+    h1 span{color:var(--accent)}
+    .hero p{font-size:1.15rem;color:var(--muted);max-width:650px;margin-bottom:32px}
+    .buttons{display:flex;gap:13px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:10px;font-weight:900;border:1px solid var(--line);transition:.2s}
+    .btn-primary{background:var(--accent);color:#111;border-color:var(--accent)}
+    .btn-primary:hover{background:var(--accent2);transform:translateY(-2px)}
+    .btn-dark:hover{border-color:#555;transform:translateY(-2px)}
+    section{padding:90px 0}
+    .section-head{margin-bottom:35px}
+    .eyebrow{color:var(--accent);font-weight:900;text-transform:uppercase;letter-spacing:2px;font-size:.78rem}
+    h2{font-size:clamp(2rem,5vw,3.5rem);line-height:1;margin-top:8px}
+    .sub{color:var(--muted);max-width:650px;margin-top:12px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:27px}
+    .icon{font-size:2rem;margin-bottom:15px}
+    .card h3{font-size:1.25rem;margin-bottom:8px}
+    .card p{color:var(--muted)}
+    .band{background:#11151a;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .step{padding:22px;border-left:2px solid var(--accent);background:var(--card)}
+    .step b{color:var(--accent);font-size:.8rem}
+    .step h3{margin:7px 0}
+    .step p{color:var(--muted);font-size:.92rem}
+    .cta{background:linear-gradient(135deg,#171a1f,#101216);border:1px solid var(--line);border-radius:24px;padding:45px;display:flex;justify-content:space-between;align-items:center;gap:25px}
+    .cta p{color:var(--muted);margin-top:8px}
+    footer{padding:35px 0;border-top:1px solid var(--line);color:var(--muted)}
+    .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .phone{color:var(--accent);font-weight:900}
+    @media(max-width:760px){
+      .navlinks{display:none}
+      .menu{display:block}
+      h1{letter-spacing:-3px}
+      .grid,.process{grid-template-columns:1fr}
+      .cta{padding:30px;display:block}
+      .cta .btn{margin-top:20px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a class="logo" href="#home">SEP <span>EXPRESS</span></a>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#how">How It Works</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="menu" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+    </nav>
+    <div id="mobileNav" style="display:none;padding:0 0 18px">
+      <a href="#services" onclick="toggleMenu()">Services</a><br>
+      <a href="#how" onclick="toggleMenu()">How It Works</a><br>
+      <a href="#contact" onclick="toggleMenu()">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="badge">WEST MIDLANDS • HOUSE REMOVALS</div>
+      <h1>Moving made<br><span>simple.</span></h1>
+      <p>Reliable house removals, man & van and furniture transport from SEP Express. We make moving day straightforward, stress-free and on time.</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="tel:+447529759065">Call SEP Express</a>
+        <a class="btn btn-dark" href="mailto:a.nonga@gmail.com">Email Us</a>
+        <a class="btn btn-dark" href="#contact">Get a Quote</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="band" id="about">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">About SEP Express</div>
+        <h2>A local business built around reliability.</h2>
+        <p class="sub">SEP Express is a West Midlands-based removals and transport business focused on making moving, collecting and delivering items as easy as possible.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="icon">🤝</div>
+          <h3>Friendly & Professional</h3>
+          <p>We aim to provide a helpful, respectful service from your first enquiry through to the final delivery.</p>
+        </article>
+        <article class="card">
+          <div class="icon">⏱️</div>
+          <h3>Reliable Service</h3>
+          <p>We understand that moving days can be stressful, so clear communication and punctuality are a big part of what we do.</p>
+        </article>
+        <article class="card">
+          <div class="icon">📍</div>
+          <h3>West Midlands Based</h3>
+          <p>Based in the West Midlands, SEP Express can help with local moves, collections, deliveries and transport jobs.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">What we do</div>
+        <h2>Moving? We've got you.</h2>
+        <p class="sub">From a single item to a full house move, SEP Express is built to handle the heavy lifting. We can help with domestic removals, furniture collections, deliveries and other transport jobs.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="icon">🏠</div>
+          <h3>House Removals</h3>
+          <p>Full or part-house moves handled carefully from collection to your new home.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🚐</div>
+          <h3>Man & Van</h3>
+          <p>A flexible option for smaller moves, collections, deliveries and local transport.</p>
+        </article>
+        <article class="card">
+          <div class="icon">📦</div>
+          <h3>Furniture Transport</h3>
+          <p>Need a sofa, appliance or bulky item moved? We can help get it where it needs to go.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🚚</div>
+          <h3>Collections & Deliveries</h3>
+          <p>From marketplace purchases to larger items, get in touch to discuss your collection or delivery.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🏢</div>
+          <h3>Business Moves</h3>
+          <p>Transport stock, equipment and office items with a service tailored around your business needs.</p>
+        </article>
+        <article class="card">
+          <div class="icon">💬</div>
+          <h3>Flexible Quotes</h3>
+          <p>Every job is different. Tell us what you need moved and we can discuss the best option for you.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="how">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">The process</div>
+        <h2>Easy from start to finish.</h2>
+      </div>
+      <div class="process">
+        <div class="step"><b>01</b><h3>Get in touch</h3><p>Tell us what you're moving and where you're going.</p></div>
+        <div class="step"><b>02</b><h3>Get your quote</h3><p>We'll discuss the job and give you a straightforward price.</p></div>
+        <div class="step"><b>03</b><h3>Moving day</h3><p>Our team arrives ready to load and transport your items.</p></div>
+        <div class="step"><b>04</b><h3>Settle in</h3><p>We get everything safely delivered so you can focus on the new place.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="cta">
+        <div>
+          <div class="eyebrow">Ready to move?</div>
+          <h2>Let's get you moving.</h2>
+          <p>Call or email SEP Express for availability, questions and a personalised quote.</p>
+        </div>
+        <div class="buttons"><a class="btn btn-primary" href="tel:+447529759065">+44 7529 759065</a><a class="btn btn-dark" href="mailto:a.nonga@gmail.com">a.nonga@gmail.com</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div><strong style="color:white">SEP EXPRESS</strong> — House Removals & Transport</div>
+    <div>West Midlands • <a class="phone" href="tel:+447529759065">+44 7529 759065</a> • <a class="phone" href="mailto:a.nonga@gmail.com">a.nonga@gmail.com</a></div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu(){
+    const nav = document.getElementById('mobileNav');
+    nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
+  }
+</script>
+</body>
+</html>
